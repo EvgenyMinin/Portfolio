@@ -72,9 +72,9 @@ section
                 background-color: $coralPinkColor
     &__block
         width: 30em
-        margin-left: 45%
-        padding-top: 5em
-        padding-bottom: 25em
+        margin-left: 35%
+        padding-top: 20em
+        padding-bottom: 30em
         &--title
             font-weight: bold
             font-size: 46pt
@@ -348,125 +348,105 @@ section
 .github
     color: #929292
 
-// @media screen and (max-width: 1280px)
-//     .contact-details
-//         &__icons
-//             flex: 1
-//         &__text
-//             flex: 4
-//     .box-img
-//         &::after
-//             transform: rotate(5deg) translate(2.8em, 1em)
-//         &__even
-//             &::before
-//                 transform: rotate(-5deg) translate(-6.3em, -1.5em)
+@media screen and (max-width: 1280px)
+    .box-img
+        &::after
+            transform: rotate(5deg) translate(2.8em, 1em)
+        &__even
+            &::before
+                transform: rotate(-5deg) translate(-6.3em, -1.5em)
 
-// @media screen and (max-width: 1024px)
-//     .custom-form
-//         &__input
-//             flex: 2
-//         &__textarea
-//             flex: 2
-//     .contact-details
-//         &__icons
-//             flex: 1
-//             margin-left: 8em
-//             &::before
-//                 transform: translate(-4em, 4em)
-//         &__text
-//             flex: 4
-//     .box-img
-//         &::after
-//             transform: rotate(5deg) translate(1.8em, 1em)
-//         &__even
-//             &::before
-//                 transform: rotate(-5deg) translate(-5.3em, -1.5em)
+@media screen and (max-width: 1024px)
+    .header__block
+        margin-left: 30%
+        padding-top: 20rem
+    .box-img
+        &::after
+            transform: rotate(5deg) translate(1.8em, 1em)
+        &__even
+            &::before
+                transform: rotate(-5deg) translate(-5.3em, -1.5em)
 
-// @media screen and (max-width: 720px)
-//     .header
-//         &__block
-//             padding-top: 10em
-//             margin-left: 15%
-//     section
-//         padding: 2em 0 2em 0
-//     .block-about
-//         display: flex
-//         padding-top: 2em
-//         &__box
-//             flex: 3
-//             &--text p
-//                 line-height: 1.5em
-//                 font-size: 12pt
-//                 color: $simpleTextColor
-//                 & span
-//                     font-family: Raleway-Semibold
-//                     color: $simpleTextColor
-//                     font-size: 14pt
-//         &__img
-//             flex: 1
-//             img
-//                 height: 300px
-//                 transform: translateY(40px)
-//     .container
-//         hr
-//             transform: translateY(3em)
-//         &__title
-//             font-size: 16pt
-//             &--skills
-//                 font-size: 16pt
-//         &__subtitle
-//             font-size: 12pt
-//     .box-empty
-//         display: none
-//         &__even
-//             display: none
-//     .block-experience
-//         display: flex
-//         justify-content: space-between
-//         padding-top: 2em
-//         &__even
-//             display: flex
-//             justify-content: space-between
-//             flex-direction: row-reverse
-//             transform: translateY(1em)
-//     .box-experience
-//         flex: 7
-//         &__even
-//             flex: 7
-//     .box-img
-//         flex: 1
-//         &::after
-//             transform: rotate(5deg) translate(5px, 2em)
-//         &__even
-//             flex: 1
-//             align-self: flex-start
-//             text-align: center
-//             &::before
-//                 border-top: 40px solid $darkGreyColor
-//                 border-bottom: 0px solid transparent
-//                 border-right: 0px solid transparent
-//                 border-left: 60px solid transparent
-//                 transform: rotate(5deg) translate(3em, 2em)
-//     .skills
-//         padding: 1em 0 1em 0
-//     .block-skills
-//         flex-direction: column
-//         padding-top: 10px
-//         &__item
-//             p
-//                 margin-top: 20px
-//                 padding-bottom: 0
-//     .block-contact
-//         flex-direction: column-reverse
-//     .contact-details
-//         &__icons
-//             margin-left: 0
-//             align-items: center
-//             &::before
-//                 content: ""
-//                 position: absolute
-//                 height: 35%
-//                 border-left: 1px solid $pseudoElementsColor
-//                 transform: translate(-10em, 4em)
-//         &__text
-//             flex: 8
+@media screen and (max-width: 800px)
+    .header__block
+        margin-left: 20%
+    .block-about
+        display: flex
+        justify-content: space-between
+        padding-top: 5em
+        &__box
+            flex: 8
+            &--text p
+                font-size: 16pt
+                color: $simpleTextColor
+                & span
+                    font-family: Raleway-Semibold
+                    color: $simpleTextColor
+                    font-size: 18pt
+        &__img
+            flex: 0
+            text-align: center
+            & img
+                height: 350px
+                margin-top: 30%
+    section
+        padding: 2em 0 2em 0
+    .container
+        hr
+            transform: translateY(3em)
+        &--skills
+                font-size: 16pt
+        &__subtitle
+            font-size: 12pt
+    .box-empty
+        display: none
+        &__even
+            display: none
+    .block-experience
+        display: flex
+        justify-content: space-between
+        padding-top: 2em
+        &__even
+            display: flex
+            justify-content: space-between
+            flex-direction: row-reverse
+            transform: translateY(1em)
+    .box-experience
+        flex: 7
+        &__even
+            flex: 7
+    .box-img
+        flex: 1
+        &::after
+            transform: rotate(5deg) translate(5px, 2em)
+        &__even
+            flex: 1
+            align-self: flex-start
+            text-align: center
+            &::before
+                border-top: 40px solid $darkGreyColor
+                border-bottom: 0px solid transparent
+                border-right: 0px solid transparent
+                border-left: 60px solid transparent
+                transform: rotate(5deg) translate(3em, 2em)
+    .skills
+        padding: 3em
+    .block-skills
+        flex-direction: column
+        padding-top: 10px
+        &__item
+            p
+                margin-top: 20px
+                padding-bottom: 0
+    .footer__copy
+        padding-bottom: 2em
+
+@media screen and (max-width: 750px)
+    .header__block
+        margin-left: 15%
+        padding: 10rem 0 35rem 0
+                
+@media screen and (max-width: 720px)
+    .header__block
+        margin-left: 15%
+        padding: 10rem 0 35rem 0
