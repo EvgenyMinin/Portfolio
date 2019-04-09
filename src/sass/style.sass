@@ -1,2 +1,472 @@
-h1
-    color: green
+@font-face
+    font-family: "Raleway-Medium"
+    src: url(../fonts/Raleway-Medium.ttf)
+@font-face
+    font-family: "Raleway-Semibold"
+    src: url(../fonts/Raleway-Semibold.ttf)
+@font-face
+    font-family: "Raleway-Regular"
+    src: url(../fonts/Raleway-Regular.ttf)
+@font-face
+    font-family: "Raleway-MediumItalic"
+    src: url(../fonts/Raleway-MediumItalic.ttf)
+
+$whitecolor: #ffffff
+$coralPinkColor: #fb6470
+$navMenuColor: rgba(0, 0, 0, .3)
+$simpleTextColor: #3e3e3e
+$darkGreyColor: #353541
+$progressBarColor: #bcbcbe
+$hrColor: #e5e5e5
+$textPlaceColor: #e1e1e2
+$bgColorSkills: #1d1d24
+$pseudoElementsColor: #cccccc
+
+body
+    margin: 0
+    height: 0
+    font-family: Raleway-Medium
+section
+    padding: 5em 0 5em 0
+
+#check-menu
+    display: none
+    &:checked ~ .header__nav
+        max-height: 500px
+        font-size: 1em
+
+.header
+    background: url(../img/header.jpg) no-repeat center top / cover
+    &__menu
+        padding-top: 45px
+        position: relative
+        color: $whitecolor
+        height: 40px
+    &__label
+        display: block
+        position: absolute
+        cursor: pointer
+        z-index: 2
+        line-height: 40px
+    &__nav
+        display: block
+        position: absolute
+        padding-top: 1em
+        width: 100%
+        bottom: 0
+        left: 0
+        transform: translateY(100%)
+        max-height: 0
+        font-size: 0
+        overflow: hidden
+        transition: .5s all
+        & a
+            display: block
+            width: 20%
+            padding: 10px
+            color: $whitecolor
+            text-decoration: none
+            border-bottom: 1px solid $coralPinkColor
+            background-color: $navMenuColor
+            &:hover
+                background-color: $coralPinkColor
+    &__block
+        width: 30em
+        margin-left: 45%
+        padding-top: 5em
+        padding-bottom: 25em
+        &--title
+            font-weight: bold
+            font-size: 46pt
+            color: $whitecolor
+            text-align: center
+            height: 80px
+            position: relative
+            &::before
+                content: ""
+                width: 100%
+                left: 0
+                position: absolute
+                border-top: 2px solid $coralPinkColor
+            &::after
+                content: ""
+                width: 100%
+                top: 100%
+                left: 0
+                position: absolute
+                border-bottom: 2px solid $coralPinkColor
+        &--subtitle
+            font-size: 1em
+            color: $whitecolor
+            text-align: center
+            padding-top: 1em
+        &--button
+            display: block
+            font-size: 1.4em
+            color: $whitecolor
+            text-align: center
+            text-decoration: none
+            cursor: pointer
+            background-color: $coralPinkColor
+            width: 50%
+            margin: 0 auto
+            padding: .6em
+            border-radius: 5px
+            margin-top: 40px
+            &:hover
+                background-color: $whitecolor
+                color: $coralPinkColor
+.container
+    width: 90%
+    margin: 0 auto
+    & p
+        color: $simpleTextColor
+    & hr
+        border: 1px solid $hrColor
+        transform: translateY(5em)
+    &__title
+        color: $simpleTextColor
+        font-size: 2.5em
+        font-family: Raleway-Semibold
+        position: relative
+        padding-bottom: .6em
+        &--skills
+            color: $whitecolor
+            font-size: 2.5em
+            font-family: Raleway-Semibold
+            position: relative
+            padding-bottom: .6em
+            &::after
+                content: ""
+                width: 3.5em
+                top: 100%
+                left: 0%
+                position: absolute
+                border-bottom: 2px solid $coralPinkColor
+        &::after
+            content: ""
+            width: 3.5em
+            top: 100%
+            left: 0%
+            position: absolute
+            border-bottom: 2px solid $coralPinkColor
+    &__subtitle
+        padding: 2em 0 .6em 0
+        color: $simpleTextColor
+        line-height: 1.5em
+        font-size: 16pt
+
+.block-about
+    display: flex
+    justify-content: center
+    padding-top: 5em
+    &__box
+        flex: 1
+        &--text p
+            font-size: 16pt
+            color: $simpleTextColor
+            & span
+                font-family: Raleway-Semibold
+                color: $simpleTextColor
+                font-size: 18pt
+    &__img
+        flex: 1
+
+.block-experience
+    display: flex
+    justify-content: space-between
+    padding-top: 5em
+    &__even
+        display: flex
+        justify-content: space-between
+        transform: translateY(-3em)
+
+.box-experience
+    flex: 5
+    background-color: $darkGreyColor
+    padding: 1em
+    border-radius: .7em
+    z-index: 2
+    &__even
+        flex: 5
+        background-color: $darkGreyColor
+        padding: 1em
+        border-radius: .7em
+        position: relative
+        z-index: 2
+    &__title
+        color: $whitecolor
+        & span
+            color: $textPlaceColor
+            margin-left: 2em
+    &__subtitle
+        color: $coralPinkColor
+        padding-top: 1em
+    &__text
+        font-family: Raleway-Medium
+        color: $textPlaceColor
+        padding-top: 1em
+        line-height: 1.5em
+.box-img
+    flex: 2
+    align-self: flex-start
+    text-align: center
+    &::after
+        content: ""
+        position: absolute
+        border: 40px solid transparent
+        border-top: 40px solid $darkGreyColor
+        border-bottom: 0px solid transparent
+        border-right: 0px solid transparent
+        border-left: 60px solid transparent
+        transform: rotate(5deg) translate(3.8em, 1em)
+        z-index: 1
+    &__even
+        flex: 2
+        align-self: flex-end
+        text-align: center
+        &::before
+            content: ""
+            position: absolute
+            border: 40px solid transparent
+            border-top: 0px solid transparent
+            border-bottom: 40px solid $darkGreyColor
+            border-right: 60px solid transparent
+            border-left: 0px solid transparent
+            transform: rotate(-5deg) translate(-7.3em, -1.5em)
+            z-index: 1
+.box-empty
+    flex: 5
+    padding: 1em
+    &__even
+        flex: 5
+        padding: 1em
+
+.skills
+    background-color: $bgColorSkills
+
+.block-skills
+    display: flex
+    justify-content: space-between
+    padding-top: 2em
+    &__item
+        flex: 3
+        & p
+            color: $whitecolor
+            margin-bottom: 0
+            margin-top: 30px
+            padding-bottom: 1em
+        & span
+            display: flex
+            justify-content: space-between
+            & progress
+                align-self: center
+                height: 5px
+                background: $progressBarColor
+                flex: 5
+                border: none
+                &::-webkit-progress-bar
+                    background: $progressBarColor
+                &::-webkit-progress-value
+                    background: $coralPinkColor
+                &::-moz-progress-bar
+                    background-color: $coralPinkColor
+                &::-moz-progress-value
+                    background-color: $coralPinkColor
+                &::-ms-progress-bar
+                    background: $progressBarColor
+                &::-ms-fill
+                    background: $coralPinkColor
+            & p
+                padding-left: 2em
+                flex: 1
+                margin-top: 1em
+
+.contact-details
+    display: flex
+    &__icons
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        font-size: 32px
+        color: $simpleTextColor
+    &__text
+        margin-left: 1rem
+
+.footer
+    &__social
+        padding-top: 2em
+        display: flex
+        justify-content: space-between
+        width: 10em
+        margin: 0 auto
+        &--item
+            font-size: 32px
+            &:nth-child(even)
+                &::after
+                    content: ""
+                    position: absolute
+                    height: 32px
+                    border-left: 1px solid $pseudoElementsColor
+                    transform: translateX(.5em)
+                &::before
+                    content: ""
+                    position: absolute
+                    height: 32px
+                    border-right: 1px solid $pseudoElementsColor
+                    transform: translateX(-.5em)
+    &__copy
+        color: $simpleTextColor
+        font-size: 12px
+        text-align: center
+        padding-top: 2em
+        padding-bottom: 7em
+
+#arrow
+    height: 30px
+    width: 30px
+    color: #fb6470
+    position: fixed
+    top: 43px
+    left: 17px
+    cursor: pointer
+.arrow__up::before
+    content: "➤"
+    font-size: 30px
+    display: inline-block
+    transform: rotate(-90deg)
+.arrow__down:before
+    content: "➤"
+    font-size: 30px
+    display: inline-block
+    transform: rotate(90deg)
+
+.vk
+    color: #4c75a3
+.inst
+    color: #ffbd4f
+.github
+    color: #929292
+
+// @media screen and (max-width: 1280px)
+//     .contact-details
+//         &__icons
+//             flex: 1
+//         &__text
+//             flex: 4
+//     .box-img
+//         &::after
+//             transform: rotate(5deg) translate(2.8em, 1em)
+//         &__even
+//             &::before
+//                 transform: rotate(-5deg) translate(-6.3em, -1.5em)
+
+// @media screen and (max-width: 1024px)
+//     .custom-form
+//         &__input
+//             flex: 2
+//         &__textarea
+//             flex: 2
+//     .contact-details
+//         &__icons
+//             flex: 1
+//             margin-left: 8em
+//             &::before
+//                 transform: translate(-4em, 4em)
+//         &__text
+//             flex: 4
+//     .box-img
+//         &::after
+//             transform: rotate(5deg) translate(1.8em, 1em)
+//         &__even
+//             &::before
+//                 transform: rotate(-5deg) translate(-5.3em, -1.5em)
+
+// @media screen and (max-width: 720px)
+//     .header
+//         &__block
+//             padding-top: 10em
+//             margin-left: 15%
+//     section
+//         padding: 2em 0 2em 0
+//     .block-about
+//         display: flex
+//         padding-top: 2em
+//         &__box
+//             flex: 3
+//             &--text p
+//                 line-height: 1.5em
+//                 font-size: 12pt
+//                 color: $simpleTextColor
+//                 & span
+//                     font-family: Raleway-Semibold
+//                     color: $simpleTextColor
+//                     font-size: 14pt
+//         &__img
+//             flex: 1
+//             img
+//                 height: 300px
+//                 transform: translateY(40px)
+//     .container
+//         hr
+//             transform: translateY(3em)
+//         &__title
+//             font-size: 16pt
+//             &--skills
+//                 font-size: 16pt
+//         &__subtitle
+//             font-size: 12pt
+//     .box-empty
+//         display: none
+//         &__even
+//             display: none
+//     .block-experience
+//         display: flex
+//         justify-content: space-between
+//         padding-top: 2em
+//         &__even
+//             display: flex
+//             justify-content: space-between
+//             flex-direction: row-reverse
+//             transform: translateY(1em)
+//     .box-experience
+//         flex: 7
+//         &__even
+//             flex: 7
+//     .box-img
+//         flex: 1
+//         &::after
+//             transform: rotate(5deg) translate(5px, 2em)
+//         &__even
+//             flex: 1
+//             align-self: flex-start
+//             text-align: center
+//             &::before
+//                 border-top: 40px solid $darkGreyColor
+//                 border-bottom: 0px solid transparent
+//                 border-right: 0px solid transparent
+//                 border-left: 60px solid transparent
+//                 transform: rotate(5deg) translate(3em, 2em)
+//     .skills
+//         padding: 1em 0 1em 0
+//     .block-skills
+//         flex-direction: column
+//         padding-top: 10px
+//         &__item
+//             p
+//                 margin-top: 20px
+//                 padding-bottom: 0
+//     .block-contact
+//         flex-direction: column-reverse
+//     .contact-details
+//         &__icons
+//             margin-left: 0
+//             align-items: center
+//             &::before
+//                 content: ""
+//                 position: absolute
+//                 height: 35%
+//                 border-left: 1px solid $pseudoElementsColor
+//                 transform: translate(-10em, 4em)
+//         &__text
+//             flex: 8

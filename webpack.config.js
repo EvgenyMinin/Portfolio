@@ -6,6 +6,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const pug = require('./webpack/pug');
 const babel = require('./webpack/babel');
 const sass = require('./webpack/sass');
+const fileLoader = require('./webpack/file-loader');
+const copyFonts = require('./webpack/copyFonts');
 
 const common = merge([ 
     {
@@ -25,6 +27,8 @@ const common = merge([
     pug(),
     babel(),
     sass(),
+    fileLoader(),
+    copyFonts(),
 ]);
 
 module.exports = function(env, argv) {

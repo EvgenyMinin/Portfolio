@@ -2,6 +2,191 @@
 html(lang="en")
     head
         meta(charset="UTF-8")
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
         title Portfolio
     body
-        h1 Portfolio
+        header.header
+            .container
+                .header__menu
+                    input#check-menu(type="checkbox")
+                    label.header__label(for="check-menu")
+                        img(src="img/navMenu.png", alt="navMenu")
+                    nav.header__nav
+                        a(href="#about") Обо мне
+                        a(href="#experience") Опыт работы
+                        a(href="#work") Образование
+                        a(href="#skills") Мои навыки
+                .header__block
+                    .header__block--title Евгений Минин
+                    .header__block--subtitle #Frontend Developer
+        a#about
+        section
+            .container
+                .block-about
+                    .block-about__box
+                        .container__title Обо мне
+                        .container__subtitle Начинающий frontend-разработчик. Самостоятельно изучаю разработку веб-приложений. Хочу работать 
+                            | в крупной компании.
+                        .block-about__box--text
+                            p
+                                span Имя: 
+                                | Евгений Минин
+                            p
+                                span Возраст: 
+                                | 27 лет
+                            p
+                                span Email: 
+                                | evgeny.frontend@gmail.com
+                            p
+                                span Адрес: 
+                                | г. Архангельск, пр-кт Советских космонавтов 171
+                    .block-about__img
+                        img(src="img/me.png", alt="myPic")
+                hr
+        a#experience
+        section
+            .container
+                .container__title Опыт работы
+                .block-experience
+                    .box-empty
+                    .box-img
+                        img(src="img/circle.png")
+                    .box-experience    
+                        .box-experience__title Ассистент Режиссёра
+                            span @ГТРК Поморье
+                        .box-experience__subtitle Март 2018 - настоящее время
+                        .box-experience__text Ассистент выпускающего режиссёра. Помимо этого режиссёр монтажа, делаю сюжеты и передачи к эфиру.
+                .block-experience__even
+                    .box-experience__even
+                        .box-experience__title Frontend Developer
+                            span @IT Expert
+                        .box-experience__subtitle Ноябрь 2017 - Март 2018
+                        .box-experience__text Работал на реальных проектах, делал верстку, разрабатывал функциональность веб-приложений.
+                    .box-img__even
+                        img(src="img/circle.png")
+                    .box-empty__even
+                .block-experience
+                    .box-empty
+                    .box-img
+                        img(src="img/circle.png")
+                    .box-experience
+                        .box-experience__title Монтажер
+                            span @ГТРК Поморье
+                        .box-experience__subtitle Июль 2015 - Ноябрь 2017
+                        .box-experience__text Подготовка сюжетов и передач к эфиру.
+                .block-experience__even
+                    .box-experience__even
+                        .box-experience__title Практикант
+                            span @ГАУ ИКТ
+                        .box-experience__subtitle Декабрь 2014
+                        .box-experience__text Зимняя практика по web-дизайну.
+                    .box-img__even
+                        img(src="img/circle.png")
+                    .box-empty__even
+                hr
+        a#work
+        section
+            .container
+                .container__title Образование
+                .block-experience
+                    .box-empty
+                    .box-img
+                        img(src="img/circle.png")
+                    .box-experience    
+                        .box-experience__title Оконченное высшее
+                            span @САФУ
+                        .box-experience__subtitle Сентябрь 2010 - Июль 2015
+                        .box-experience__text Кафедра прикладной информатики в экономике. Специальность - мультимедиа и интернет технологии в экономических системах.
+                .block-experience__even
+                    .box-experience__even
+                        .box-experience__title Неоконченное высшее
+                            span @СПбГПУ
+                        .box-experience__subtitle Сентябрь 2009 - Март 2010 
+                        .box-experience__text Кафедра машиностроения и автоматизированных систем. Специальность - инженер полиграфист.
+                    .box-img__even
+                        img(src="img/circle.png")
+                    .box-empty__even
+                .block-experience
+                    .box-empty
+                    .box-img
+                        img(src="img/circle.png")
+                    .box-experience
+                        .box-experience__title Оконченное среднее
+                            span @Школа №23
+                        .box-experience__subtitle Сентябрь 1999 - Июнь 2009
+        a#skills
+        section.skills
+            .container
+                .container__title--skills Мои навыки
+                .block-skills
+                    .block-skills__item
+                        p HTML
+                        span
+                            progress(max="100" value="62")
+                            p 62%
+                        p CSS
+                        span
+                            progress(max="100" value="75")
+                            p 75%
+                        p JavaScript
+                        span
+                            progress(max="100" value="25")
+                            p 25%
+                    .block-skills__item
+                        p Gulp
+                        span
+                            progress(max="100" value="87")
+                            p 87%
+                        p Sass
+                        span
+                            progress(max="100" value="76")
+                            p 76%
+                        p Pug
+                        span
+                            progress(max="100" value="81")
+                            p 81%
+                    .block-skills__item
+                        p Webpack
+                        span
+                            progress(max="100" value="67")
+                            p 67%
+                        p React
+                        span
+                            progress(max="100" value="62")
+                            p 62%
+                        p Redux
+                        span
+                            progress(max="100" value="11")
+                            p 11%
+        a#message
+        section
+            .container
+                .block-contact
+                    .block-contact__info
+                        .contact-details
+                            .contact-details__icons
+                                i.fa.fa-home
+                                i.fa.fa-paper-plane
+                                i.fa.fa-phone
+                            .contact-details__text
+                                h3 Адрес
+                                p г. Архангельск, пр-кт Советских космонавтов 171
+                                h3 Email
+                                p evgeny.frontend@gmail.com
+                                h3 Телефон
+                                p +7-902-507-85-92
+                hr
+        footer.footer
+            .container
+                .footer__social
+                    .footer__social--item
+                        a(href="https://vk.com/johnnyk1992" target="_blank")
+                            i.fa.fa-vk.vk
+                    .footer__social--item
+                        a(href="https://www.instagram.com/johnny1992i/" target="_blank")
+                            i.fa.fa-instagram.inst
+                    .footer__social--item
+                        a(href="https://github.com/EvgenyMinin" target="_blank")
+                            i.fa.fa-github.github
+                .footer__copy &copy Евгений Минин. Все права защищены.
+        #arrow
